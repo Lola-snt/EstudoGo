@@ -1,10 +1,11 @@
 package controllers
 
 import (
-	"api/respostas"
+	"api/src/autenticacao"
 	"api/src/banco"
 	"api/src/modelos"
 	"api/src/repositorios"
+	"api/src/respostas"
 	"encoding/json"
 	"errors"
 	"github.com/gorilla/mux"

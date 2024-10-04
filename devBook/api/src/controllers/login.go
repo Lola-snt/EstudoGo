@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"api/respostas"
-	"api/seguranca"
 	"api/src/autenticacao"
 	"api/src/banco"
 	"api/src/modelos"
 	"api/src/repositorios"
+	"api/src/respostas"
+	"api/src/seguranca/seguranca"
 
 	"encoding/json"
 	"io/ioutil"
@@ -18,7 +18,7 @@ import (
 func Login(w http.ResponseWriter, r *http.Request) {
 	corpoRequisicao, erro := ioutil.ReadAll(r.Body)
 	if erro != nil {
-		respostas.as.Erro(w, http.StatusUnprocessableEntity, erro)
+		respostas.Erro(w, http.StatusUnprocessableEntity, erro)
 		return
 	}
 
